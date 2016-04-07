@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="node_modules/handlebars/dist/handlebars.min.js"></script>
+  <script type="text/javascript" src="node_modules/backbone/node_modules/underscore/underscore-min.js"></script>
+  <script type="text/javascript" src="node_modules/backbone/backbone-min.js"></script>
+  <title></title>
+</head>
+<body>
+
+  <form id="submitForm">
+    <h1>Find commiter through commit sha hash</h1>
+    <input type="text" id="user" placeholder="user"></input>
+    <input type="text" id="repo" placeholder="repo"></input>
+    <button type="button" id="submit">submit</button>
+  </form>
+
+  <div id="commiters">
+    
+  </div>
+
+
+  <script id="commiter-template" type="text/x-handlebars-template">
+    <div>
+      <p>{{name}}</p>
+      <img src="{{img}}">
+    </div>
+  </script>
+
+  <script src="javascript/models/commiterModel.js"></script>
+  <script src="javascript/models/commitModel.js"></script>
+  <script src="javascript/collections/commitCollection.js"></script>
+  <script src="javascript/views/commiterView.js"></script>
+  <script src="javascript/views/appView.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
