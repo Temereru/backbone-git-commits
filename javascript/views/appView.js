@@ -9,9 +9,6 @@ var AppView = Backbone.View.extend({
     $user = $('#user');
     $repo = $('#repo');
     $commiters = $('#commiters');
-
-    
-    
   },
 
   submit: function(){
